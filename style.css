@@ -1,13 +1,25 @@
 /* Interface design  */
-body,
-h1 {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-.container {
-  background-color: azure;
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+  background-color: #000;
+  width: 100vw;
   height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -15,8 +27,18 @@ h1 {
   text-align: center;
 }
 h1 {
-  color: red;
-  display: block;
+  color: #ffffff;
+  text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5,
+    -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5,
+    -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+}
+
+#output {
+  padding: 10px 15px;
+  border: #000000 2px solid;
+  letter-spacing: 4px;
+  background-color: #ffffff;
+  color: #000000;
 }
 .btn {
   background-color: green;
@@ -24,5 +46,10 @@ h1 {
   padding: 10px 15px;
   margin: 10px;
   cursor: pointer;
-  border: none;
+  border: #000000 2px solid;
+  letter-spacing: 2px;
+}
+.btn:hover {
+  background-color: #ffffff;
+  color: #000000;
 }

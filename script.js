@@ -5,22 +5,24 @@ window.onload = () => {
   main();
 };
 
+// Click Handler create
 function main() {
   const container = document.getElementById("root");
+  const output = document.getElementById("output");
   const btn = document.getElementById("btn_changer");
 
   btn.addEventListener("click", function () {
-    const bgColor = randomRGBColor();
-    container.style.backgroundColor = bgColor;
+    const BgHexColor = HexColorGenaretor();
+    container.style.backgroundColor = BgHexColor;
+    output.value = BgHexColor;
   });
 }
 
-// random  RGB color create
-// low color rgb(0,0,0) maximum colo rgb(255, 255, 255)
-
-function randomRGBColor() {
+// Hex color genarator
+function HexColorGenaretor() {
   const red = Math.floor(Math.random() * 255);
   const green = Math.floor(Math.random() * 255);
-  const black = Math.floor(Math.random() * 255);
-  return `rgb(${red}, ${green}, ${black})`;
+  const blue = Math.floor(Math.random() * 255);
+
+  return `#${red.toString(16)}${green.toString(16)}${blue.toString(16)}`;
 }
