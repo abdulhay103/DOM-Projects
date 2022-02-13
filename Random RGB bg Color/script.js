@@ -1,26 +1,25 @@
-// Background color change DOM Manupulations
+// Lucky Number Viewer
 
-// Step 1 onload handler
+//Onchange Handler genarate
 window.onload = () => {
-  main();
+  // main();
+  // console.log("ok");
 };
+// main();
 
 function main() {
-  const container = document.getElementById("root");
-  const btn = document.getElementById("btn_changer");
+  const number = document.getElementById("number");
+  const btn = document.getElementById("btn-number");
 
   btn.addEventListener("click", function () {
-    const bgColor = randomRGBColor();
-    container.style.backgroundColor = bgColor;
+    const pickedNumber = randomNumber();
+    number.innerHTML = `${pickedNumber}`;
   });
 }
 
-// random  RGB color create
-// low color rgb(0,0,0) maximum colo rgb(255, 255, 255)
+// Random Number Genarate
 
-function randomRGBColor() {
-  const red = Math.floor(Math.random() * 255);
-  const green = Math.floor(Math.random() * 255);
-  const black = Math.floor(Math.random() * 255);
-  return `rgb(${red}, ${green}, ${black})`;
+function randomNumber() {
+  const number = Math.floor(Math.random() * 1000);
+  return number;
 }
