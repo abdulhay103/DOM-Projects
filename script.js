@@ -8,13 +8,20 @@ window.onload = () => {
 // Click Handler create
 function main() {
   const container = document.getElementById("root");
-  const output = document.getElementById("output");
-  const btn = document.getElementById("btn_changer");
+  const output = document.getElementById("btn-output");
+  const copyBtn = document.getElementById("btn-copy");
+  const clickBtn = document.getElementById("btn_changer");
 
-  btn.addEventListener("click", function () {
+  //Bg Changer Click Event
+  clickBtn.addEventListener("click", function () {
     const BgHexColor = HexColorGenaretor();
     container.style.backgroundColor = BgHexColor;
     output.value = BgHexColor;
+  });
+
+  // Color code copy Event
+  copyBtn.addEventListener("click", function () {
+    window.navigator.clipboard.writeText(output.value);
   });
 }
 
