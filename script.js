@@ -2,7 +2,7 @@
 
 //Onchange Handler genarate
 window.onload = () => {
-  // main();
+  main();
   // console.log("ok");
 };
 // main();
