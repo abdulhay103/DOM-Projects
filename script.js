@@ -22,13 +22,6 @@ function main() {
   // Color code copy Event
   copyBtn.addEventListener("click", function () {
     window.navigator.clipboard.writeText(output.value);
-
-    // Area For Toast Massage
-    const toastMassage = document.createElement("div");
-    toastMassage.className = "toast-massage";
-    toastMassage.innerHTML = output.value;
-    console.log(toastMassage);
-    container.appendChild(toastMassage);
   });
 }
 
