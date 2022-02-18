@@ -64,3 +64,13 @@ h1 {
   background-color: #ffffff;
   color: #000000;
 }
+
+.toast-massage {
+  position: fixed;
+  z-index: 999;
+  background-color: #25a881;
+  width: 100px;
+  height: 30px;
+  top: 0;
+  right: 0;
+}
