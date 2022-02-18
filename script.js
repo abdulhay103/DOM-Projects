@@ -1,4 +1,4 @@
-// Background color change DOM Manupulations
+// Calculator Setup Formula
 
 // Step 1 onload handler
 window.onload = () => {
@@ -7,29 +7,33 @@ window.onload = () => {
 
 // Click Handler create
 function main() {
-  const container = document.getElementById("root");
-  const output = document.getElementById("btn-output");
-  const copyBtn = document.getElementById("btn-copy");
-  const clickBtn = document.getElementById("btn_changer");
+  const calBody = document.querySelector(".content");
+  const calButton = document.querySelector("button");
+  const darkBtn = document.querySelector(".dark");
+  const blueBtn = document.querySelector(".blue");
+  const lightBtn = document.querySelector(".light");
+  // Display Elements
+  const functionArea = document.querySelector(".functions");
+  const resultsArea = document.querySelector(".results");
+  const highlightsArea = document.querySelector(".highlights");
 
-  //Bg Changer Click Event
-  clickBtn.addEventListener("click", function () {
-    const BgHexColor = HexColorGenaretor();
-    container.style.backgroundColor = BgHexColor;
-    output.value = BgHexColor;
+  // Collect all number buttons
+  const numbers = document.querySelectorAll(".number-btn button");
+  // console.log(numbers);
+
+  //Theme Changer Click Event
+  darkBtn.addEventListener("click", function () {
+    calBody.className = "content darkTheme";
+    calButton.className = "darkBtnStyle";
+  });
+  blueBtn.addEventListener("click", function () {
+    calBody.className = "content blueTheme";
+    calButton.className = "blueBtnStyle";
+  });
+  lightBtn.addEventListener("click", function () {
+    calBody.className = "content lightTheme";
+    calButton.className = "lightBtnStyle";
   });
 
-  // Color code copy Event
-  copyBtn.addEventListener("click", function () {
-    window.navigator.clipboard.writeText(output.value);
-  });
-}
-
-// Hex color genarator
-function HexColorGenaretor() {
-  const red = Math.floor(Math.random() * 255);
-  const green = Math.floor(Math.random() * 255);
-  const blue = Math.floor(Math.random() * 255);
-
-  return `#${red.toString(16)}${green.toString(16)}${blue.toString(16)}`;
+  // Display Function
 }
