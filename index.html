@@ -11,7 +11,11 @@
     <div class="container" id="root">
       <h1>Genaral Calculator</h1>
       <div class="content">
-        <div class="display">Display</div>
+        <div class="display">
+          <p class="functions">Formula</p>
+          <h2 class="result">0</h2>
+          <p class="highlights">Highlight</p>
+        </div>
         <div class="power-btn-group">
           <button type="text" value="ON" class="power-btn">ON</button>
           <button type="text" value="M+" class="memory-btn">
@@ -24,38 +28,49 @@
         </div>
         <div class="digit-btn-group">
           <div class="numbers">
-            <div class="numbers-row-1">
+            <div class="numbers-row">
               <button type="number" value="7" class="number-btn">7</button>
               <button type="number" value="8" class="number-btn">8</button>
               <button type="number" value="9" class="number-btn">9</button>
             </div>
-            <div class="numbers-row-2">
-              <button type="number" value="4">4</button>
-              <button type="number" value="5">5</button>
-              <button type="number" value="6">6</button>
+            <div class="numbers-row">
+              <button type="number" value="5" class="number-btn">5</button>
+              <button type="number" value="4" class="number-btn">4</button>
+              <button type="number" value="6" class="number-btn">6</button>
             </div>
-            <div class="numbers-row-3">
-              <button type="number" value="1">1</button>
-              <button type="number" value="2">2</button>
-              <button type="number" value="3">3</button>
+            <div class="numbers-row">
+              <button type="number" value="1" class="number-btn">1</button>
+              <button type="number" value="2" class="number-btn">2</button>
+              <button type="number" value="3" class="number-btn">3</button>
             </div>
-            <div class="numbers-row-4">
-              <button type="number" value=".">.</button>
-              <button type="number" value="0">0</button>
-              <button type="number" value="%">%</button>
+            <div class="numbers-row">
+              <button type="number" value="." class="number-btn">.</button>
+              <button type="number" value="0" class="number-btn">0</button>
+              <button type="number" value="%" class="number-btn">%</button>
+            </div>
+            <div class="bg-row">
+              <button type="text" value="dark" class="dark-theme color-btn">
+                Dark
+              </button>
+              <button type="text" value="blue" class="blue-theme color-btn">
+                Blue
+              </button>
+              <button type="text" value="light" class="light-theme color-btn">
+                Light
+              </button>
             </div>
           </div>
           <div class="opterators">
-            <div class="operators-row-1">
-              <button type="number" value="*">*</button>
-              <button type="number" value="/">/</button>
+            <div class="operators-row">
+              <button type="number" value="*" class="operator">*</button>
+              <button type="number" value="/" class="operator">/</button>
             </div>
-            <div class="operators-row-2">
-              <button type="number" value="+">+</button>
-              <button type="number" value="-">-</button>
+            <div class="operators-row">
+              <button type="number" value="+" class="operator">+</button>
+              <button type="number" value="-" class="operator">-</button>
             </div>
-            <div class="operators-row-3">
-              <button type="number" value="=">=</button>
+            <div class="operators-row">
+              <button type="number" value="=" class="operatorS">=</button>
             </div>
           </div>
         </div>

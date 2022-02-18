@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffff00;
+  /* background-color: #ffff00; */
 }
 h1 {
   color: #ffffff;
@@ -44,7 +44,14 @@ h1 {
   height: 25%;
   border: #151515 1px solid;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
   background-color: azure;
+  align-items: flex-end;
+  padding: 10px;
+}
+.result {
+  margin: 10px 0;
 }
 .power-btn-group {
   width: 100%;
@@ -72,15 +79,40 @@ h1 {
   height: 100%;
   border: #151515 1px solid;
 }
-.numbers-row-1 {
+.numbers-row {
   width: 100%;
-  height: 25%;
+  height: 20%;
+  margin-top: 5px;
 }
 .number-btn {
-  width: 33%;
+  width: 30%;
+  height: 100%;
+}
+.bg-row {
+  width: 100%;
+  height: auto;
+  margin-top: 5px;
+}
+.color-btn {
+  width: 30%;
   height: 100%;
 }
 .opterators {
   width: 34%;
   border: #151515 1px solid;
+}
+
+.operators-row {
+  width: 100%;
+  height: 30%;
+  margin-top: 5px;
+}
+.operator {
+  width: 45%;
+  height: 100%;
+}
+.operatorS {
+  width: 90%;
+  height: 95%;
+  margin: 5px;
 }
