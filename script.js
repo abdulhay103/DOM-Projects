@@ -27,7 +27,6 @@ function main() {
     const toastMassage = document.createElement("div");
     toastMassage.className = "toast-massage";
     toastMassage.innerHTML = output.value;
-    console.log(toastMassage);
     container.appendChild(toastMassage);
   });
 }
