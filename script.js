@@ -5,6 +5,9 @@ window.onload = () => {
   main();
 };
 
+//Global Variables
+let divElement = null;
+
 // Click Handler create
 function main() {
   const container = document.getElementById("root");
@@ -23,11 +26,12 @@ function main() {
   copyBtn.addEventListener("click", function () {
     window.navigator.clipboard.writeText(output.value);
 
-    // Area For Toast Massage
-    const toastMassage = document.createElement("div");
-    toastMassage.className = "toast-massage";
-    toastMassage.innerHTML = output.value;
-    container.appendChild(toastMassage);
+    // Toast Massage Function Call
+    if (divElement !== null) {
+      divElement.remove();
+      divElement == null;
+    }
+    toastMassage(`${output.value} copied!`);
   });
 }
 
@@ -38,4 +42,23 @@ function HexColorGenaretor() {
   const blue = Math.floor(Math.random() * 255);
 
   return `#${red.toString(16)}${green.toString(16)}${blue.toString(16)}`;
+}
+
+// Toast Massage Genarator
+function toastMassage(msg) {
+  divElement = document.createElement("div");
+  divElement.classList = "toast-massage toast-animation-in";
+  divElement.innerText = msg;
+
+  divElement.addEventListener("click", function () {
+    divElement.classList.remove("toast-animation-in");
+    divElement.classList.add("toast-animation-out");
+
+    divElement.addEventListener("animationend", function () {
+      divElement.remove();
+      divElement == null;
+    });
+  });
+
+  document.body.appendChild(divElement);
 }

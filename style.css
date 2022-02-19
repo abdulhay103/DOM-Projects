@@ -69,8 +69,41 @@ h1 {
   position: fixed;
   z-index: 999;
   background-color: #25a881;
-  width: 100px;
-  height: 50px;
-  top: 0;
-  right: 0;
+  width: 200px;
+  top: 20px;
+  right: 20px;
+  text-align: center;
+  padding: 20px;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(23, 23, 23, 0.5);
+  cursor: pointer;
+}
+
+.toast-animation-in {
+  animation: toast-slider-in 0.5s ease-in;
+}
+.toast-animation-out {
+  animation: toast-slider-out 0.5s ease-in;
+}
+
+@keyframes toast-slider-in {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes toast-slider-out {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(200px);
+    opacity: 0;
+  }
 }
