@@ -22,6 +22,12 @@ function main() {
     output.value = BgHexColor;
   });
 
+  //Type Hex Color Keyup Handaler
+  output.addEventListener("keyup", function (e) {
+    const color = e.target.value;
+    container.style.backgroundColor = color;
+  });
+
   // Color code copy Event
   copyBtn.addEventListener("click", function () {
     window.navigator.clipboard.writeText(output.value);
@@ -31,7 +37,11 @@ function main() {
       divElement.remove();
       divElement == null;
     }
-    toastMassage(`${output.value} copied!`);
+    if (isColoHex(color)) {
+      toastMassage(`${color} copied!`);
+    } else {
+      alert("invalied color code");
+    }
   });
 }
 
@@ -61,4 +71,17 @@ function toastMassage(msg) {
   });
 
   document.body.appendChild(divElement);
+}
+
+// Function For Type HexColor code and Change Background
+/**
+ *
+ * @param {String} color
+ */
+function isColoHex(color) {
+  if (color.length !== 7) return false;
+  if (color.length[0] !== "#") return false;
+
+  color = color.substring(1);
+  return /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(color);
 }
